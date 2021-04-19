@@ -30,6 +30,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.cui.fighting</groupId>
+            <artifactId>fighting-api</artifactId>
+        </dependency>
+
     </dependencies>
 
 

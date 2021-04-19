@@ -13,6 +13,7 @@
     <modules>
         <module>fighting-system</module>
         <module>fighting-business</module>
+        <module>fighting-api</module>
     </modules>
 
     <properties>
@@ -60,6 +61,12 @@
                 <version>${lombok.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.cui.fighting</groupId>
+                <artifactId>fighting-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -90,7 +97,6 @@
             </resource>
         </resources>
     </build>
-
 
 
 </project>

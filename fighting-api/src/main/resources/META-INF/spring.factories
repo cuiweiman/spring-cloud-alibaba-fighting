@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.cui.fighting.api.factory.RemoteMemberServiceFallbackFactory

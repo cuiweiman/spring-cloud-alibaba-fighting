@@ -1,9 +1,8 @@
 package com.cui.fighting.openfiegn;
 
 import com.cui.fighting.api.RemoteMemberService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,11 +19,14 @@ import javax.annotation.Resource;
 @RequestMapping("/feign")
 public class FeignOrderMemberController {
 
+    @Value("${common.config.name}")
+    private String commonConfigName;
+
     @Resource
     private RemoteMemberService memberService;
 
     @GetMapping("/order")
     public String orderToMember() {
-        return memberService.getUser(123789);
+        return commonConfigName.concat(memberService.getUser(123789));
     }
 }
